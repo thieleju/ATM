@@ -528,41 +528,174 @@
 <table>
 <thead>
 <tr>
-<th><strong>Team Mitglied</strong></th>
-<th><strong>Rolle</strong></th>
-<th><strong>Vertiefungsthema</strong></th>
+<th>Rollen</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Julian Thiele</strong></td>
-<td>Lead</td>
-<td>UML/Kollaborations-Werkzeug</td>
+<td>Benutzer</td>
+<td>Die Benutzer sind Kunden der Bank, die den Geldautomaten zur Verfügung stellt</td>
 </tr>
 <tr>
-<td><strong>Juri Kaemper</strong></td>
-<td>Coach</td>
-<td>Test und Qualitäts Sicherung</td>
-</tr>
-<tr>
-<td><strong>Felix Möhler</strong></td>
-<td>-</td>
-<td>Requirements Engineering</td>
-</tr>
-<tr>
-<td><strong>Michel Franz</strong></td>
-<td>-</td>
-<td>User Experience</td>
-</tr>
-<tr>
-<td><strong>Christian Andrés</strong></td>
-<td>-</td>
-<td>Programmierung</td>
+<td>Administrator</td>
+<td>Administratoren des Bankautomatensystems, die Verwaltungsrechte über alle Benutzer besitzen</td>
 </tr>
 </tbody>
 </table>
 <h3 id="personas">Personas</h3>
-<p>coming soon</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Gertrude Gabel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rolle</td>
+<td>Benutzer</td>
+</tr>
+<tr>
+<td>Alter</td>
+<td>65</td>
+</tr>
+<tr>
+<td>Geschlecht</td>
+<td>weiblich</td>
+</tr>
+<tr>
+<td>Tätigkeit</td>
+<td>Rentnerin</td>
+</tr>
+<tr>
+<td>Familienstand</td>
+<td>verheiratet</td>
+</tr>
+<tr>
+<td>Bildung</td>
+<td>Mittelschule</td>
+</tr>
+<tr>
+<td>Computerkenntnisse</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>Interessen und Hobbies</td>
+<td>Wandern, Kaffee trinken</td>
+</tr>
+<tr>
+<td>Einstellung zum Produkt</td>
+<td>"Eine tolle Maschine, tut was sie soll"</td>
+</tr>
+<tr>
+<td>Wünsche</td>
+<td>Einfache Bedienung, wenig zum Merken</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Peter Pecks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rolle</td>
+<td>Benutzer</td>
+</tr>
+<tr>
+<td>Alter</td>
+<td>38</td>
+</tr>
+<tr>
+<td>Geschlecht</td>
+<td>männlich</td>
+</tr>
+<tr>
+<td>Tätigkeit</td>
+<td>Handwerker</td>
+</tr>
+<tr>
+<td>Familienstand</td>
+<td>verheiratet</td>
+</tr>
+<tr>
+<td>Bildung</td>
+<td>Realschule</td>
+</tr>
+<tr>
+<td>Computerkenntnisse</td>
+<td>Grundkenntnisse</td>
+</tr>
+<tr>
+<td>Interessen und Hobbies</td>
+<td>Autos, Actionfilme, Fahrradfahren</td>
+</tr>
+<tr>
+<td>Einstellung zum Produkt</td>
+<td>"Hoffentlich werden die neuen Geldautomaten besser"</td>
+</tr>
+<tr>
+<td>Wünsche</td>
+<td>Nützliche Funktionen, Schnelle Bedienbarkeit</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Andy Auman</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rolle</td>
+<td>Administrator</td>
+</tr>
+<tr>
+<td>Alter</td>
+<td>29</td>
+</tr>
+<tr>
+<td>Geschlecht</td>
+<td>männlich</td>
+</tr>
+<tr>
+<td>Tätigkeit</td>
+<td>Systemadministrator</td>
+</tr>
+<tr>
+<td>Familienstand</td>
+<td>ledig</td>
+</tr>
+<tr>
+<td>Bildung</td>
+<td>Abitur</td>
+</tr>
+<tr>
+<td>Computerkenntnisse</td>
+<td>Fachkenntnisse</td>
+</tr>
+<tr>
+<td>Interessen und Hobbies</td>
+<td>Programmierung, Netzwerke, Gaming</td>
+</tr>
+<tr>
+<td>Einstellung zum Produkt</td>
+<td>""</td>
+</tr>
+<tr>
+<td>Wünsche</td>
+<td>Viele Funktionen, Wenig Konfigurationsaufwand</td>
+</tr>
+</tbody>
+</table>
 <h2 id="user-stories">User Stories</h2>
 <p>Als [Rolle] möchte ich [Ziel/Wunsch], um [Nutzen]</p>
 <p>Als Bankkunde möchte ich verschiedene Geldbeträge eingeben, um diese abzuheben.
@@ -608,18 +741,18 @@ Als Bankkunde möchte ich eine Stückelung auswählen können, um gewünschte Sc
 </tr>
 <tr>
 <td><strong>Credit</strong></td>
-<td>Gutschrifft</td>
+<td>Gutschrift</td>
 </tr>
 <tr>
 <td><strong>Debit</strong></td>
-<td>Lastschrifft</td>
+<td>Lastschrift</td>
 </tr>
 </tbody>
 </table>
 <h2 id="mengengerust">Mengengerüst</h2>
 <p>Mengengerüst Stichpunkte:</p>
 <ul>
-<li>Pinlänge: Immer genau 4 Stellen</li>
+<li>Pin-Länge: Immer genau 4 Stellen</li>
 <li>Maximaler Betrag pro Account an einem Tag abheben: 1000€?</li>
 <li>Maximale Nutzer gleichzeitig: ???</li>
 <li>Maximale Transaktionen pro Minute: ???</li>
