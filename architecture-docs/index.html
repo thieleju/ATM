@@ -665,6 +665,54 @@ Wie sollen Komponenten strukturiert und verfeinert werden?</p>
 <h3 id="anforderungen-an-die-mensch-maschine-schnittstelle">Anforderungen an die Mensch-Maschine-Schnittstelle</h3>
 <p>Die Mensch-Maschine-Schnittstelle, oder auch Benutzerschnittstelle, bezieht sich auf die Kommunikation zwischen einem Nutzer (Mensch) und dem Geldautomaten (Maschine).</p>
 <p>Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Peripherieeinheiten des Geldautomaten, welche eine digitale Information an die Recheneinheit des Geldautomaten weiterleiten. Die von der Recheneinheit entgegengenommene Information wird mittels der aufgespielten Software verarbeitet und eine Ausgabe-Information wird erzeugt. Die Recheneinheit steuert digital die Peripherieeinheiten des Geldautomaten an, welche eine optische (Bildschirm-Ausgabe) und mechanische Ausgabe Information (Geldauszahlung) erzeugen. Die Rückgabe-Informationen werden vom Menschen visuell (Bildschirm-Information) und haptisch (Annahme des ausgezahlten Geldes) verarbeitet.</p>
+<table>
+<thead>
+<tr>
+<th>Ein-/Ausgabe</th>
+<th><strong>Mensch Schnittstelle</strong></th>
+<th><strong>Hardware Schnittstelle</strong></th>
+<th><strong>Software Schnittstelle</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eingabe</strong></td>
+<td>Hände</td>
+<td>Encrypting PIN Pad</td>
+<td>Tastenabfrage</td>
+</tr>
+<tr>
+<td></td>
+<td>Augen</td>
+<td>ID-Kartenleser</td>
+<td>Touchbildschirm Abfrage</td>
+</tr>
+<tr>
+<td></td>
+<td>-</td>
+<td>Softkeys oder Touchscreen</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>----------------------------</td>
+<td>----------------------------</td>
+<td>----------------------------</td>
+</tr>
+<tr>
+<td><strong>Ausgabe</strong></td>
+<td>Hände</td>
+<td>Bildschirm</td>
+<td>Grafikausgabe</td>
+</tr>
+<tr>
+<td></td>
+<td>Augen</td>
+<td>Auszahlmodul</td>
+<td>Peripherie Ansteuerung</td>
+</tr>
+</tbody>
+</table>
 <h3 id="gestaltungsprinzipien-und-style-guide">Gestaltungsprinzipien und Style-Guide</h3>
 <h3 id="interatkionsmodellierung">Interatkionsmodellierung</h3>
 <p>Benutzer:</p>
