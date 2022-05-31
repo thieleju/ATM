@@ -654,7 +654,7 @@ Wie sollen Komponenten strukturiert und verfeinert werden?</p>
 <ul>
 <li>UI mit den Java-Swing GUI Bibliotheken</li>
 <li><code>KeypadListener.java</code> für Kommunikationsschnittstelle zwischen dem Tastenfeld und dem Bildschirm Objekt</li>
-<li><code>ATMListener.java</code> ist die Schnittstelle zum Haupt-ATM-Objekt, in der Aktionen wie ein Wechsel in einen anderen Modus oder das Betätigen der Enter-Taste behandelt werden</li>
+<li><code>ATMListener.java</code> ist die Schnittstelle zum Haupt-ATM-Objekt, in der Aktionen, wie ein Wechsel in einen anderen Modus oder das Betätigen der Enter-Taste behandelt werden</li>
 </ul>
 <h3 id="big-picture-der-systemarchitektur">Big Picture der Systemarchitektur</h3>
 <h2 id="systementwurf">Systementwurf</h2>
@@ -665,7 +665,6 @@ Wie sollen Komponenten strukturiert und verfeinert werden?</p>
 <h3 id="anforderungen-an-die-mensch-maschine-schnittstelle">Anforderungen an die Mensch-Maschine-Schnittstelle</h3>
 <p>Die Mensch-Maschine-Schnittstelle, oder auch Benutzerschnittstelle, bezieht sich auf die Kommunikation zwischen einem Nutzer (Mensch) und dem Geldautomaten (Maschine).
 Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Peripherieeinheiten des Geldautomaten, welche eine digitale Information an die Recheneinheit des Geldautomaten weiterleiten. Die von der Recheneinheit entgegengenommene Information wird mittels der aufgespielten Software verarbeitet und eine Ausgabe-Information wird erzeugt. Die Recheneinheit steuert digital die Peripherieeinheiten des Geldautomaten an, welche eine optische (Bildschirm-Ausgabe) und mechanische Ausgabe Information (Geldauszahlung) erzeugen. Die Rückgabe-Informationen werden vom Menschen visuell (Bildschirm-Information) und haptisch (Annahme des ausgezahlten Geldes) verarbeitet.</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <table>
 <thead>
 <tr>
@@ -685,20 +684,8 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 <tr>
 <td></td>
 <td>Augen</td>
-<td>ID-Kartenleser</td>
+<td>ID-Kartenleser, Softkeys oder Touchscreen</td>
 <td>Touchbildschirm Abfrage</td>
-</tr>
-<tr>
-<td></td>
-<td>-</td>
-<td>Softkeys oder Touchscreen</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>----------------------------</td>
-<td>----------------------------</td>
-<td>----------------------------</td>
 </tr>
 <tr>
 <td><strong>Ausgabe</strong></td>
@@ -711,66 +698,6 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 <td>Augen</td>
 <td>Auszahlmodul</td>
 <td>Peripherie Ansteuerung</td>
-</tr>
-<tr>
-<td>=======</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Ein-/Ausgabe</td>
-<td><strong>Mensch Schnittstelle</strong></td>
-<td><strong>Hardware Schnittstelle</strong></td>
-<td><strong>Software Schnittstelle</strong></td>
-</tr>
-<tr>
-<td>------------</td>
-<td>----------------------------</td>
-<td>----------------------------</td>
-<td>----------------------------</td>
-</tr>
-<tr>
-<td><strong>Eingabe</strong></td>
-<td>Hände</td>
-<td>Encrypting PIN Pad</td>
-<td>Tastenabfrage</td>
-</tr>
-<tr>
-<td></td>
-<td>Augen</td>
-<td>ID-Kartenleser</td>
-<td>Touchbildschirm Abfrage</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Softkeys oder Touchscreen</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>----------------------------</td>
-<td>----------------------------</td>
-<td>----------------------------</td>
-</tr>
-<tr>
-<td><strong>Ausgabe</strong></td>
-<td>Hände</td>
-<td>Bildschirm</td>
-<td>Grafikausgabe</td>
-</tr>
-<tr>
-<td></td>
-<td>Augen</td>
-<td>Auszahlmodul</td>
-<td>Peripherie Ansteuerung</td>
-</tr>
-<tr>
-<td>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 5f44fefdafbaeede31f98b0f7bd0a133bb5c0411</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
