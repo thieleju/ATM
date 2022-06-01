@@ -634,9 +634,6 @@
 <h1 id="architekturdokumentation">Architekturdokumentation</h1>
 <h2 id="beschreibung-der-systemarchitektur">Beschreibung der Systemarchitektur</h2>
 <h3 id="priorisierung-der-nicht-funktionalen-anforderungen">Priorisierung der nicht funktionalen Anforderungen</h3>
-<blockquote>
-<p>Beschreibt wie gut ein System/Produkt eine bestimmte Funktion erfüllt</p>
-</blockquote>
 <ul>
 <li>Gute Benutzerfreundlichkeit und Bedienbarkeit</li>
 <li>Hohe Performance bei Operationen wie Guthaben abrufen, einzahlen und auszahlen</li>
@@ -645,11 +642,22 @@
 <h3 id="architekturprinzipien">Architekturprinzipien</h3>
 <blockquote>
 <p>Nach welchen Kriterien soll das System in Komponenten unterteilt werden?
-Welche Aspekte sollen in Komponenten zusammengefasst werden?
-Welche Dienstleistungen sollen Komponenten nach außen an ihrer Schnittstelle anbieten, welche Aspekte müssen geschützt sein?
-Wie sollen die Komponenten miteinander interagieren?
 Wie sollen Komponenten strukturiert und verfeinert werden?</p>
 </blockquote>
+<p>Das System wurde in verschiedene Komponenten unterteilt, die sich jeweils auf eine bestimmte Aufgabe beziehen, um eine enge Kopplung der Module untereinander zu reduzieren.
+Der verschachtelte Aufbau der UI Komponenten bildet eine Struktur, die leicht erweitert werden kann.</p>
+<blockquote>
+<p>Welche Aspekte sollen in Komponenten zusammengefasst werden?</p>
+</blockquote>
+<p>In der <code>ATM.java</code> Klasse werden die Änderungen von einem Modus in den Nächsten behandelt.
+Dem entsprechend wird die <code>Screen.java</code> Klasse angesteuert, um die UI Elemente zu aktualisieren.</p>
+<p>Die Klasse <code>Screen.java</code> beinhaltet alle Funktionen, die zum Ändern der UI Elemente benötigt werden. In ihr werden die Klassen <code>Keypad.java</code> und <code>SidePanel.java</code> verwendet.</p>
+<blockquote>
+<p>Welche Dienstleistungen sollen Komponenten nach außen an ihrer Schnittstelle anbieten?
+Wie sollen die Komponenten miteinander interagieren?</p>
+</blockquote>
+<p>Die Komponente <code>Keypad.java</code> gibt über das <code>KeypadListener.java</code> Interface alle Events für Tastendrücke an die <code>Screen.java</code> Klasse weiter.
+Die Komponente <code>Screen.java</code> gibt über das Interface <code>ATMListener.java</code> Events wie z.B. einen Modus-Wechsel oder das Betätigen der Enter-Taste an die <code>ATM.java</code> Klasse weiter.</p>
 <h3 id="schnittstellen">Schnittstellen</h3>
 <ul>
 <li>UI mit den Java-Swing GUI Bibliotheken</li>
@@ -657,16 +665,17 @@ Wie sollen Komponenten strukturiert und verfeinert werden?</p>
 <li><code>ATMListener.java</code> ist die Schnittstelle zum Haupt-ATM-Objekt, in der Aktionen, wie ein Wechsel in einen anderen Modus oder das Betätigen der Enter-Taste behandelt werden</li>
 </ul>
 <h3 id="big-picture-der-systemarchitektur">Big Picture der Systemarchitektur</h3>
+<p>Der Aufbau der Systemarchitektur ist weitestgehend modular gestaltet, gut geeignet für Tests und leicht erweiterbar.</p>
 <h2 id="systementwurf">Systementwurf</h2>
 <h3 id="systemdekomposition">Systemdekomposition</h3>
-<p>Das System lässt sich hauptsächlich durch die Bestandteile <code>Show Balance</code>, <code>Withdrawal</code>, <code>Deposit</code> und <code>Admin View</code> beschreiben. Zusätzlich gibt es ein <code>Menü</code> und eine <code>Login</code>, sowie eine <code>Logout</code> Funktion.</p>
-<p>Vom Menü aus, ist es einem Benutzer möglich alle relevanten Funktionalitäten durch das Drücken einer Zahl zu erreichen. Die Funktion <code>atmSwitchModeAction()</code> wechselt nun, je nach eingegebener Zahl, in den entsprechenden Modus. Eine weitere wichtige Komponente des System ist das <code>Keypad</code>, welches die verschiedenen Knöpfe darstellt. Dieses befindet sich immer in der linken Hälfte des Fensters und hilft dem Nutzer bei der Bedienung des Automaten. Es wird in dem Konstruktor der Klasse <code>Screen.java</code> zusammen mit dem SidePanel initialisiert.</p>
+<p>Das System lässt sich hauptsächlich durch die Bestandteile <code>Guthaben anzeigen</code>, <code>Geld abheben</code> und <code>Geld einzahlen</code> beschreiben. Zusätzlich gibt es ein <code>Menü</code> eine <code>Admin-Ansicht</code> und eine <code>Login</code>, sowie eine <code>Logout</code> Funktion.</p>
+<p>Vom Menü aus, ist es einem Benutzer möglich alle relevanten Funktionalitäten durch das Drücken einer Zahl zu erreichen. Die Funktion <code>atmSwitchModeAction()</code> wechselt nun, je nach eingegebener Zahl, in den entsprechenden Modus. Eine weitere wichtige Komponente des Systems ist das <code>Keypad</code>, welches die verschiedenen Knöpfe darstellt. Dieses befindet sich immer in der linken Hälfte des Fensters und hilft dem Nutzer bei der Bedienung des Automaten. Es wird in dem Konstruktor der Klasse <code>Screen.java</code> zusammen mit dem SidePanel initialisiert.</p>
 <p>Das <code>SidePanel</code> hat, wie das Keypad, eine eigene Klasse. Es befindet sich auf der rechten Hälfte des Fensters und beinhaltet unter anderem einen „Back-Button“. Mit diesem kann zurück in den „Menü-Modus“ gewechselt werden. In dem SidePanel befindet sich außerdem das Textfeld, in welchem die Benutzereingabe angezeigt wird, sowie ein JLabel. Dieses zeigt, je nach Modus, zum Beispiel das verfügbare Geld, oder die verschiedenen Optionen mit entsprechender Eingabe an.</p>
-<p>Eine weitere Funktionalität ist die <code>Admin View</code>. Loggt sich ein Admin ein öffnet sich ein neues Fenster. In diesem können die Daten der Benutzer geändert und anschließend gespeichert werden.</p>
+<p>Eine weitere Funktionalität ist die <code>Admin-Ansicht</code>. Loggt sich ein Admin ein, öffnet sich ein neues Fenster. In diesem können die Daten der Benutzer geändert und anschließend gespeichert werden.</p>
 <h3 id="designalternativen-und-entscheidungen">Designalternativen und –Entscheidungen</h3>
-<p>Es wurde sich dazu entschieden die einzelnen Funktionalitäten mit Hilfe von verschiedenen Modi zu implementieren. Der Bankautomat befindet sich zu jedem Zeitpunkt in einem bestimmten Modus und reagiert, je nach Modus, unterschiedlich auf bestimmte Eingaben. Dieser Ansatz unterscheidet sich stark von der ursprünglichen Version des Automaten. Hier gab es keine Modi und die verschiedenen Funktionen, wie das Geldabheben, wurden von eigenen Klassen übernommen.</p>
-<p>In der alten Version des Bankautomaten, konnte ein Admin mit Hilfe eines Iterators auf die einzelnen Benutzer zugreifen. In dem überarbeiteten Modell ist es möglich, aus einer Liste von Benutzern auf den gewünschten Benutzer zu klicken. Dies ermöglicht eine einfachere und schnellere Bearbeitung.</p>
-<p>Zudem wird das Speichern der verschiedenen Benutzer nicht mehr innerhalb einer Java-Klasse übernommen, sondern außerhalb in einer JSON-Datei. Die Benutzerdaten werden, mit Hilfe der Klasse „BankDatabase“ in diese Datei übertragen.</p>
+<p>Es wurde sich dazu entschieden die einzelnen Funktionalitäten mit Hilfe von verschiedenen Modi zu implementieren. Der Bankautomat befindet sich zu jedem Zeitpunkt in einem bestimmten Modus und reagiert, je nach Modus, unterschiedlich auf bestimmte Eingaben. Dieser Ansatz unterscheidet sich von der ursprünglichen Version des Automaten. Hier gab es keine Modi und die verschiedenen Funktionen, wie das Geldabheben, wurden von eigenen Klassen übernommen.</p>
+<p>In der alten Version des Bankautomaten, konnte ein Admin mit Hilfe eines Iterators auf die einzelnen Benutzer zugreifen. In dem überarbeiteten Modell ist es möglich, aus einer Liste von Benutzern den gewünschten per Mausklick auszuwählen. Dies ermöglicht eine einfachere und schnellere Bearbeitung.</p>
+<p>Zudem wird das Speichern der verschiedenen Benutzer nicht mehr innerhalb einer Java-Klasse übernommen, sondern außerhalb in einer JSON-Datei. Die Benutzerdaten werden mit Hilfe der Klasse <code>BankDatabase.java</code> in diese Datei übertragen.</p>
 <h3 id="cross-cutting-concerns-nfrs">Cross-Cutting-Concerns, NFRs</h3>
 <p>Ein Benutzer soll in jedem Modus eine Eingabe tätigen können. Daher wurde das Keypad und ein entsprechendes Textfeld so implementiert, dass diese Komponenten stets sichtbar und verfügbar sind. Andere Komponenten werden teilweise unsichtbar gemacht, da diese nicht in jedem Modus gebraucht werden.</p>
 <p>Ein weiterer Cross-Cutting-Concern ist das Geben von passendem Feedback an den Benutzer. Hier soll dem Benutzer, unabhängig von dem aktuellen Modus, stets mitgeteilt werden, wenn er eine ungültige Eingabe getätigt hat. Für diese Art von Fehlermeldungen wurde im untersten Bereich des Fensters ein Textfeld angelegt, welches die jeweilige Nachricht in roter Farbe anzeigt.</p>
