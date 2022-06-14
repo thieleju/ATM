@@ -257,6 +257,33 @@
     Priorisierung der nicht funktionalen Anforderungen
   </a>
   
+    <nav class="md-nav" aria-label="Priorisierung der nicht funktionalen Anforderungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qualitatsanforderungen" class="md-nav__link">
+    Qualitätsanforderungen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anforderungen-an-lieferbestandteile" class="md-nav__link">
+    Anforderungen an Lieferbestandteile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anforderungen-an-die-benutzerschnittstelle" class="md-nav__link">
+    Anforderungen an die Benutzerschnittstelle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -542,6 +569,33 @@
     Priorisierung der nicht funktionalen Anforderungen
   </a>
   
+    <nav class="md-nav" aria-label="Priorisierung der nicht funktionalen Anforderungen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qualitatsanforderungen" class="md-nav__link">
+    Qualitätsanforderungen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anforderungen-an-lieferbestandteile" class="md-nav__link">
+    Anforderungen an Lieferbestandteile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anforderungen-an-die-benutzerschnittstelle" class="md-nav__link">
+    Anforderungen an die Benutzerschnittstelle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -675,8 +729,13 @@
 <h1 id="architekturdokumentation">Architekturdokumentation</h1>
 <h2 id="beschreibung-der-systemarchitektur">Beschreibung der Systemarchitektur</h2>
 <h3 id="priorisierung-der-nicht-funktionalen-anforderungen">Priorisierung der nicht funktionalen Anforderungen</h3>
-<p><strong>Änderbarkeit</strong> und <strong>Wiederverwendbarkeit</strong> waren uns besonders wichtig, da wir zu Beginn Schwierigkeiten hatten, uns einen Überblick über den bestehenden Code zu verschaffen. Aus diesem Grund entschieden wir uns, den Code noch einmal von Grund auf neu zu erstellen.</p>
-<p>Eine weitere nicht funktionale Anforderung ist die <strong>Bedienbarkeit</strong> oder <strong>Benutzerfreundlichkeit</strong> des Programms. Da diese Anwendung für eine sehr große Menge an Benutzern ausgelegt ist, wurde die Bedienbarkeit und Benutzerfreundlichkeit des Programms auf eine höhere Priorität gesetzt. So wird gewährleistet, dass Benutzer aller Altersgruppen gut mit der Anwendung interagieren können.</p>
+<h4 id="qualitatsanforderungen">Qualitätsanforderungen</h4>
+<p><strong>Änderbarkeit</strong> und <strong>Wiederverwendbarkeit</strong> waren uns besonders wichtig, da wir zu Beginn Schwierigkeiten hatten, uns einen Überblick über den bestehenden Code zu verschaffen. Aus diesem Grund entschieden wir uns, den Code noch einmal von Grund auf neu zu erstellen.
+Dadurch verbessert sich vor allem die <strong>Brauchbarkeit</strong> und <strong>Wartbarkeit</strong> des Codes.</p>
+<h4 id="anforderungen-an-lieferbestandteile">Anforderungen an Lieferbestandteile</h4>
+<p>Eine vollständige Dokumentation in Form eines PDF Dokumentes und die Software bilden die Lieferbestandteile.</p>
+<h4 id="anforderungen-an-die-benutzerschnittstelle">Anforderungen an die Benutzerschnittstelle</h4>
+<p>Eine weitere wichtige nicht funktionale Anforderung ist die <strong>Bedienbarkeit</strong> oder <strong>Benutzerfreundlichkeit</strong> des Programms. Da diese Anwendung für eine sehr große Menge an Benutzern ausgelegt ist, wurde die Bedienbarkeit und Benutzerfreundlichkeit des Programms auf eine höhere Priorität gesetzt. So wird gewährleistet, dass Benutzer aller Altersgruppen gut mit der Anwendung interagieren können.</p>
 <h3 id="architekturprinzipien">Architekturprinzipien</h3>
 <blockquote>
 <p>Nach welchen Kriterien soll das System in Komponenten unterteilt werden?
@@ -705,8 +764,8 @@ Die Komponente <code>Screen.java</code> gibt über das Interface <code>ATMListen
 </ul>
 <h3 id="big-picture-der-systemarchitektur">Big Picture der Systemarchitektur</h3>
 <p>Der Aufbau der Systemarchitektur ist weitestgehend modular gestaltet und ist hier in einem Klassendiagramm dargestellt.</p>
-<p><img alt="Klassendiagramm" src="../images/class.png" title="Klassendiagramm" /> 
-<img alt="Exceptions" src="../images/class2.png" title="Exceptions" /> </p>
+<p><img alt="Klassendiagramm" src="../images/class.png" title="Klassendiagramm" />
+<img alt="Exceptions" src="../images/class2.png" title="Exceptions" /></p>
 <h2 id="systementwurf">Systementwurf</h2>
 <h3 id="systemdekomposition">Systemdekomposition</h3>
 <p>Im folgenden Abschnitt werden die einzelnen Komponenten des Systems und ihre Funktionen beschrieben.</p>
@@ -786,8 +845,8 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 <li>Benutzer drückt „Abbruch“. ATM zeigt Menü zur weiteren Auswahl an.</li>
 <li>Benutzer legt Bargeld in den Deposit-Slot.</li>
 <li>Benutzer drückt „Bestätigen“. ATM schließt den Deposit-Slot, validiert die Eingabe, bei erfolgreicher Prüfung wird der betrag dem Bankkonto gutgeschrieben und das Menü zu weiteren Auswahl angezeigt.</li>
-<li>Benutzer drückt „Bestätigen“. ATM schließt den Deposit-Slot, validiert die Eingabe und bei nicht erfolgreicher Prüfung wird Deposit-Slot wieder geöffnet. </li>
-<li>Benutzer entnimmt das Bargeld. ATM wirft Bankkarte aus und zeigt Willkommens Bildschirm an. </li>
+<li>Benutzer drückt „Bestätigen“. ATM schließt den Deposit-Slot, validiert die Eingabe und bei nicht erfolgreicher Prüfung wird Deposit-Slot wieder geöffnet.</li>
+<li>Benutzer entnimmt das Bargeld. ATM wirft Bankkarte aus und zeigt Willkommens Bildschirm an.</li>
 <li>Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm an.</li>
 </ol>
 </blockquote>
@@ -806,13 +865,13 @@ Der Mensch gibt mit seinen Aktoren (Händen) eine Eingabe-Information an die Per
 <li>Der Benutzer Inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.</li>
 <li>Der Benutzer gibt sein Passwort ein um sich zu authentifizieren. ATM Zeigt das Menü zu weiteren Auswahl an.</li>
 <li>Der Benutzer drückt „Logout“. ATM wirft Bankkarte aus.</li>
-<li>Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm an. </li>
+<li>Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm an.</li>
 </ol>
 </blockquote>
 <h4 id="adminansicht">Adminansicht</h4>
-<p><img alt="InterkationsDiagramm" src="../images/AdminView.png" title="InterkationsDiagramm" /> </p>
+<p><img alt="InterkationsDiagramm" src="../images/AdminView.png" title="InterkationsDiagramm" /></p>
 <h4 id="benutzeransicht">Benutzeransicht</h4>
-<p><img alt="InterkationsDiagramm" src="../images/BenutzerView.png" title="InterkationsDiagramm" /> </p>
+<p><img alt="InterkationsDiagramm" src="../images/BenutzerView.png" title="InterkationsDiagramm" /></p>
 
               
             </article>
