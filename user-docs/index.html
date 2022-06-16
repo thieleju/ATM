@@ -265,9 +265,61 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Benutzerdokumentation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Benutzerdokumentation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geld-abheben" class="md-nav__link">
+    Geld abheben
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geld-einzahlen" class="md-nav__link">
+    Geld einzahlen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontostand-anzeigen" class="md-nav__link">
+    Kontostand anzeigen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    Logout
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -370,6 +422,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#geld-abheben" class="md-nav__link">
+    Geld abheben
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geld-einzahlen" class="md-nav__link">
+    Geld einzahlen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontostand-anzeigen" class="md-nav__link">
+    Kontostand anzeigen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    Logout
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -383,41 +471,41 @@
 
 
 <h1 id="benutzerdokumentation">Benutzerdokumentation</h1>
-<p>Benutzer:</p>
-<p>Geld abheben</p>
+<p>Im Folgenden wird eine Anleitung zur Benutzung des ATM zu verschiedenen Optionen dargestellt.</p>
+<h2 id="geld-abheben">Geld abheben</h2>
 <blockquote>
 <ol>
 <li>Der Benutzer Inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.</li>
 <li>Der Benutzer gibt sein Passwort ein um sich zu authentifizieren. ATM Zeigt das Menü zu weiteren Auswahl an.</li>
 <li>Der Benutzer drückt „Abbruch“. ATM zeigt Menü zur weiteren Auswahl an.</li>
 <li>Der Benutzer Wählt Betrag und Stückelung. ATM zahlt Betrag in gewünschter Stückelung aus, zeigt neuen Kontostand an und wirft Bankkarte aus.</li>
-<li>Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm</li>
+<li>Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm.</li>
 </ol>
 </blockquote>
-<p>Geld einzahlen</p>
+<h2 id="geld-einzahlen">Geld einzahlen</h2>
 <blockquote>
 <ol>
 <li>Der Benutzer Inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.</li>
-<li>Der Benutzer gibt sein Passwort ein um sich zu authentifizieren. ATM Zeigt das Menü zu weiteren Auswahl an.</li>
+<li>Der Benutzer gibt seine PIN ein um sich zu authentifizieren. ATM Zeigt das Menü zu weiteren Auswahl an.</li>
 <li>Der Benutzer drückt „Geld einzahlen“ . ATM zeigt Informationsbildschirm und öffnet Deposit-Slot.</li>
 <li>Benutzer drückt „Abbruch“. ATM zeigt Menü zur weiteren Auswahl an.</li>
 <li>Benutzer legt Bargeld in den Deposit-Slot.</li>
-<li>Benutzer drückt „Bestätigen“. ATM schließt den Deposit-Slot, validiert die Eingabe, bei erfolgreicher Prüfung wird der betrag dem Bankkonto gutgeschrieben und das Menü zu weiteren Auswahl angezeigt.</li>
+<li>Benutzer drückt „Enter“. ATM schließt den Deposit-Slot, validiert die Eingabe, bei erfolgreicher Prüfung wird der betrag dem Bankkonto gutgeschrieben und das Menü zu weiteren Auswahl angezeigt.</li>
 <li>Benutzer drückt „Bestätigen“. ATM schließt den Deposit-Slot, validiert die Eingabe und bei nicht erfolgreicher Prüfung wird Deposit-Slot wieder geöffnet.</li>
 <li>Benutzer entnimmt das Bargeld. ATM wirft Bankkarte aus und zeigt Willkommens Bildschirm an.</li>
 <li>Der Benutzer nimmt die Karte. ATM zeigt Willkommens Bildschirm an.</li>
 </ol>
 </blockquote>
-<p>Kontostand anzeigen</p>
+<h2 id="kontostand-anzeigen">Kontostand anzeigen</h2>
 <blockquote>
 <ol>
 <li>Der Benutzer Inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.</li>
 <li>Der Benutzer gibt sein Passwort ein um sich zu authentifizieren. ATM Zeigt das Menü zu weiteren Auswahl an.</li>
-<li>Benutzer drückt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand und Datum.</li>
-<li>Benutzer drückt „Weitere Auswahl“. ATM zeigt Bildschirm zur weiteren Auswahl an.</li>
+<li>Benutzer drückt „Kontostand anzeigen“. ATM zeigt Bildschirm mit Kontostand an.</li>
+<li>Benutzer drückt „Zurück“. ATM zeigt Bildschirm zur weiteren Auswahl an.</li>
 </ol>
 </blockquote>
-<p>Logout</p>
+<h2 id="logout">Logout</h2>
 <blockquote>
 <ol>
 <li>Der Benutzer Inseriert seine Bankkarte. ATM zeigt das Authentifizierungsmenü an.</li>
