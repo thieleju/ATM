@@ -444,16 +444,20 @@
 <li>Es gibt viele unbenutzte konstante int Variablen</li>
 <li>Sobald Enter betätigt wird, wird die PIN überprüft (login)</li>
 <li>Wenn man eingeloggt ist, wird das Menü angezeigt, wenn man als Admin eingeloggt ist, wird das Admin-Menü angezeigt</li>
-<li>Im Menü kann man nun zwischen Funktionen wählen:</li>
+<li>Im Menü kann man nun zwischen Funktionen wählen:<ul>
 <li><code>balance</code>: Eigenes Guthaben anzeigen</li>
 <li><code>withdrawal</code>: Geld abheben, indem man die Scheine einzeln wählt</li>
-<li><code>deposit</code>: Geld einzahlen. Geld ist erst verfügbar, wenn überprüft</li>
+<li><code>deposit</code>: Geld einzahlen. Geld ist erst verfügbar, wenn überprüft.</li>
 <li><code>exit</code>: Führt Login erneut aus, öffnet allerdings neues Fenster</li>
-<li>Sollte man als Admin angemeldet sein, öffnet sich die Adminoberfläche mit diesen Funktionen:</li>
+</ul>
+</li>
+<li>Sollte man als Admin angemeldet sein, öffnet sich die Adminoberfläche mit diesen Funktionen:<ul>
 <li>Kontostand jedes Nutzers einsehen</li>
 <li>Zwischen Accounts wecheln</li>
 <li>Accounts löschen</li>
 <li>Neue Accounts hinzufügen</li>
+</ul>
+</li>
 </ul>
 <p><code>Transaction.java</code></p>
 <ul>
@@ -519,14 +523,16 @@
 <p><code>Screen.java</code></p>
 <ul>
 <li>JFrame-Komponente, die Textfelder, Labels und Buttons besitzt</li>
-<li>Besitzt Funktionen, um Nachrichten in der Konsole auszugeben</li>
-<li>Besitzt Funktionen, um UI-Elemente anzuzeigen:</li>
+<li>Besitzt Funktionen um Nachrichten in der Konsole auszugeben</li>
+<li>Besitzt Funktionen um UI-Elemente anzuzeigen:<ul>
 <li>Login</li>
 <li>Menü</li>
 <li>Kontostand</li>
 <li>Geldauszahlung</li>
 <li>Geldeinzahlung</li>
 <li>Admin-Ansicht</li>
+</ul>
+</li>
 </ul>
 <p><code>Keypad.java</code></p>
 <ul>
