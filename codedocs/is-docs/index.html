@@ -444,24 +444,20 @@
 <li>Es gibt viele unbenutzte konstante int Variablen</li>
 <li>Sobald Enter betätigt wird, wird die PIN überprüft (login)</li>
 <li>Wenn man eingeloggt ist, wird das Menü angezeigt, wenn man als Admin eingeloggt ist, wird das Admin-Menü angezeigt</li>
-<li>Im Menü kann man nun zwischen Funktionen wählen:<ul>
+<li>Im Menü kann man nun zwischen Funktionen wählen:</li>
 <li><code>balance</code>: Eigenes Guthaben anzeigen</li>
 <li><code>withdrawal</code>: Geld abheben, indem man die Scheine einzeln wählt</li>
-<li><code>deposit</code>: Geld einzahlen. Geld ist erst verfügbar, wenn überprüft.</li>
+<li><code>deposit</code>: Geld einzahlen. Geld ist erst verfügbar, wenn überprüft</li>
 <li><code>exit</code>: Führt Login erneut aus, öffnet allerdings neues Fenster</li>
-</ul>
-</li>
-<li>Sollte man als Admin angemeldet sein, öffnet sich die Adminoberfläche mit diesen Funktionen:<ul>
+<li>Sollte man als Admin angemeldet sein, öffnet sich die Adminoberfläche mit diesen Funktionen:</li>
 <li>Kontostand jedes Nutzers einsehen</li>
 <li>Zwischen Accounts wecheln</li>
 <li>Accounts löschen</li>
 <li>Neue Accounts hinzufügen</li>
 </ul>
-</li>
-</ul>
 <p><code>Transaction.java</code></p>
 <ul>
-<li>Abstrakte Klasse, die mit einer AccountNummer, Dem Screen-Objekt und dem BankDatabase-Objekt initialisiert wird.</li>
+<li>Abstrakte Klasse, die mit einer AccountNummer, dem Screen-Objekt und dem BankDatabase-Objekt initialisiert wird.</li>
 </ul>
 <p><code>BalanceInquiry.java</code></p>
 <ul>
@@ -472,7 +468,7 @@
 <ul>
 <li>Erbt von Transactions und überschreibt die Execute-Funktion</li>
 <li>Die Execute-Funktion zeigt die Buttons zur Scheinauswahl an</li>
-<li>Die Transaction-Funktion ermöglicht das abheben von Geld, wenn noch genügend auf dem Konto und im CashDispenser verfügbar ist.</li>
+<li>Die Transaction-Funktion ermöglicht das Abheben von Geld, wenn noch genügend auf dem Konto und im CashDispenser verfügbar ist</li>
 <li>Man kann nur in 20er Scheinen abheben</li>
 </ul>
 <p><code>Deposit.java</code></p>
@@ -483,7 +479,7 @@
 </ul>
 <p><code>DepositSlot.java</code></p>
 <ul>
-<li>Klasse ist nicht vorhanden.</li>
+<li>Klasse ist nicht vorhanden</li>
 <li>Hier sollte überprüft werden, ob das Geld vorhanden ist</li>
 </ul>
 <p><code>CashDispenser.java</code></p>
@@ -494,7 +490,7 @@
 <ul>
 <li>Initialisiert alle Accounts</li>
 <li>Authentifiziert Nutzer anhand der PIN</li>
-<li>Funktionen um anhand der AccountNumber Daten über den Account abzurufen (verfügbares Guthaben, etc)</li>
+<li>Funktionen um anhand der AccountNummer Daten über den Account abzurufen (verfügbares Guthaben, etc)</li>
 <li>Besitzt Funktionen um Guthaben von Accounts abzuziehen oder aufzuladen</li>
 <li>Fehler: <code>getaccpin</code> funktioniert nicht</li>
 <li>Funktion um temporär einen Account zu erstellen und dem Account-Array hinzuzufügen</li>
@@ -523,8 +519,8 @@
 <p><code>Screen.java</code></p>
 <ul>
 <li>JFrame-Komponente, die Textfelder, Labels und Buttons besitzt</li>
-<li>Besitzt Funktionen um Nachrichten in der Konsole auszugeben</li>
-<li>Besitzt Funktionen um UI-Elemente anzuzeigen:<ul>
+<li>Besitzt Funktionen, um Nachrichten in der Konsole auszugeben</li>
+<li>Besitzt Funktionen, um UI-Elemente anzuzeigen:</li>
 <li>Login</li>
 <li>Menü</li>
 <li>Kontostand</li>
@@ -532,13 +528,11 @@
 <li>Geldeinzahlung</li>
 <li>Admin-Ansicht</li>
 </ul>
-</li>
-</ul>
 <p><code>Keypad.java</code></p>
 <ul>
 <li>Besitzt unbenutze Scanner-Funktion</li>
 <li>Besitzt JButtons für ein Tastenfeld mit Löschen und Enter Funktionen</li>
-<li>Funktion um ein JPanel mit Buttons zu initialisieren und zurückgeben</li>
+<li>Funktion, um ein JPanel mit Buttons zu initialisieren und zurückgeben</li>
 <li>Fehler: Endlos-Schleife <code>userinput()</code></li>
 </ul>
 
